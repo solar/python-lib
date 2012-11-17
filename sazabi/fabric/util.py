@@ -1,5 +1,8 @@
 # vim: fileencoding=utf-8
 
+from string import Template
+from StringIO import StringIO
+
 def upload_template(filename, destination, context, mode=None):
     """
     Create file from string.Template and upload it.
