@@ -10,9 +10,7 @@ import re
 
 def version(pattern='\d+\.\d+(?:-.*)?'):
     out = local('sbt -no-colors version', capture=True)
-    puts(out)
     pat = '^\[info\]\s+({0})$'.format(pattern)
-    puts(pattern)
     matched = re.search('^\[info\]\s+({0})$'.format(pattern), out, re.M)
 
     if not matched:
